@@ -1,0 +1,30 @@
+{
+  "name": "duel-io-forms",
+  "version": "1.0.0",
+  "description": "Form styling for DUEL",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/gulp test",
+    "watch": "./node_modules/.bin/webpack-dev-server --progress --colors",
+    "build": "./node_modules/.bin/webpack"
+  },
+  "keywords": [
+    "input",
+    "form",
+    "button"
+  ],
+  "author": "Nathan Ziarek",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
+    "css-loader": "^0.23.0",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}

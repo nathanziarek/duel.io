@@ -1,0 +1,30 @@
+/* =======
+    Form Structure
+    Defines how forms can be built and laid out.
+    ======= */
+
+form {
+    margin: 30px;
+}
+
+.form-group {
+    width: 100%;
+    display: table;
+    +.form-group,
+    +.form-element {
+        margin-top: 15px;
+    }
+    .form-element {
+        display: table-cell;
+        +.form-element {
+            padding-left: 15px;
+        }
+    }
+}
+
+.form-element {
+    +.form-element,
+    +.form-group {
+        margin-top: 15px;
+    }
+}
