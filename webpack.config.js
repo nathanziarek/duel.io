@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
     entry: "./index.js",
     devtool: 'source-map',
@@ -9,8 +11,11 @@ module.exports = {
         loaders: [
             {
                 test: /\.scss$/,
-                loaders: ["style", "css", "autoprefixer", "sass"]
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin("build/[name].css")
+    ]
 }
