@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Form styling for DUEL",
   "main": "index.js",
+  "repository": "https://github.com/nathanziarek/duel.io.git",
   "directories": {
     "test": "tests"
   },
