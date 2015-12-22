@@ -2,7 +2,7 @@ var fs = require('fs'),
     marky = require("marky-markdown"),
     minify = require('html-minifier').minify;
 
-file = fs.readFileSync('docs/index.md', 'utf8');
+file = fs.readFileSync('README.md', 'utf8');
 
 code = file.match(/\s*```[a-z]*?\n[^`]+?\n\s*```/g);
 
