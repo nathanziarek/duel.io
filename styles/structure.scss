@@ -3,28 +3,32 @@
     Defines how forms can be built and laid out.
     ======= */
 
-form {
-    margin: 30px;
-}
+@import '_variables-that-should-be-somewhere-else';
 
 .form-group {
-    width: 100%;
+    width: calc(100% + #{$grid-base});
     display: table;
-    +.form-group,
+    margin-left: ($grid-base / -2);
+    margin-right: ($grid-base / -2);
+    +form-group,
     +.form-element {
-        margin-top: 15px;
+        margin-top: $grid-base;
     }
     .form-element {
         display: table-cell;
-        +.form-element {
-            padding-left: 15px;
+        padding: 0 ($grid-base / 2);
+        &.x-half {
+            width: 50%
+        }
+        &.x-quarter {
+            width: 25%
         }
     }
 }
 
 .form-element {
     +.form-element,
-    +.form-group {
-        margin-top: 15px;
+    +form-group {
+        margin-top: $grid-base;
     }
 }
